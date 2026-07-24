@@ -48,6 +48,7 @@ button { font: inherit; }
 .map-image-wrap { position: relative; }
 .map-contour { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
 .map-place { position: absolute; left: var(--x); top: var(--y); display: grid; place-items: center; color: var(--turkish-ink); font-size: clamp(0.58rem, 1.25vw, 0.78rem); font-weight: 700; line-height: 1; text-decoration: none; white-space: nowrap; transform: translate(-50%, -50%); }
+.map-place[href="Troya/index.html"] { top: 36%; }
 .map-dot { display: block; width: 0.7rem; height: 0.7rem; border: 2px solid #fffaf1; border-radius: 50%; background: var(--turkish-red); box-shadow: 0 1px 4px var(--turkish-shadow); transition: background 160ms ease, transform 160ms ease; }
 .map-place > span:last-child { position: absolute; padding: 0.15rem 0.25rem; background: rgba(246, 239, 222, 0.9); }
 .map-place--top > span:last-child { bottom: calc(100% + 0.22rem); }.map-place--bottom > span:last-child { top: calc(100% + 0.22rem); }.map-place--left > span:last-child, .map-place--bottom-left > span:last-child { right: calc(100% + 0.22rem); }.map-place--bottom-left > span:last-child { top: calc(100% + 0.22rem); }.map-place--right > span:last-child { left: calc(100% + 0.22rem); }
@@ -101,3 +102,61 @@ h1 { max-width: 800px; margin: 0; font-family: Georgia, "Times New Roman", serif
 .footer-inner { padding: 1.2rem 0; font-size: 0.8rem; }
 @media (max-width: 760px) { .header-inner { align-items: flex-start; flex-direction: column; }.site-nav { justify-content: flex-start; }.home-hero { grid-template-columns: 1fr; }.turkiye-map { max-width: 610px; }.city-grid, .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.lightbox-arrow { width: 2.45rem; height: 3.2rem; }.lightbox-prev { left: 0.35rem; }.lightbox-next { right: 0.35rem; } }
 @media (max-width: 400px) { .header-inner, .page-main, .footer-inner { width: min(100% - 1.25rem, 1180px); }.photo-grid { gap: 0.55rem; }.site-nav { gap: 0.2rem 0.5rem; } }
+
+/* Editorial Türkiye field-guide treatment, aligned with the Canva cover. */
+:root {
+  --turkish-red: #d81920;
+  --turkish-red-deep: #8f1218;
+  --turkish-cream: #f3ece0;
+  --turkish-ink: #171514;
+  --turkish-gold: #b58a3a;
+  --turkish-border: #c8bba8;
+  --turkish-shadow: rgba(23, 21, 20, 0.14);
+}
+body { background-color: var(--turkish-cream); background-image: none; font-family: Arial, Helvetica, sans-serif; }
+.kilim-band { height: 8px; background: var(--turkish-red); }
+.site-header { border-bottom-color: var(--turkish-ink); }
+.header-inner { padding: 1.1rem 0 0.95rem; }
+.brand { color: var(--turkish-ink); font-family: Arial, Helvetica, sans-serif; font-size: 0.84rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.brand-mark { color: var(--turkish-red); }
+.site-nav { gap: 0.4rem 1rem; }
+.site-nav a { color: var(--turkish-ink); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.site-nav a:hover, .site-nav a:focus-visible, .site-nav a[aria-current="page"] { border-bottom-color: var(--turkish-red); color: var(--turkish-red); }
+.page-main { padding-top: clamp(2.2rem, 5vw, 4.8rem); }
+.home-hero { grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1.22fr); gap: clamp(1.4rem, 5vw, 5rem); }
+.hero { max-width: 680px; }
+.hero::before { display: block; margin-bottom: 1.3rem; color: var(--turkish-red); content: "01  /  PHOTO ALBUM"; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.13em; }
+.eyebrow { margin-bottom: 1rem; color: var(--turkish-red); font-size: 0.68rem; letter-spacing: 0.18em; }
+h1 { max-width: 900px; font-family: Arial, Helvetica, sans-serif; font-size: clamp(3.9rem, 10.5vw, 8.3rem); font-weight: 900; letter-spacing: -0.085em; line-height: 0.79; text-transform: uppercase; }
+.subtitle { color: var(--turkish-ink); font-family: Arial, Helvetica, sans-serif; font-size: clamp(1rem, 2vw, 1.35rem); font-style: normal; font-weight: 700; letter-spacing: 0.01em; }
+.ornament { width: 100%; max-width: 240px; color: var(--turkish-red); }
+.ornament span { font-size: 0.9rem; }
+.turkiye-map { border-top: 1px solid var(--turkish-ink); border-bottom: 1px solid var(--turkish-ink); padding: 1rem 0 0.55rem; }
+.map-contour { filter: contrast(1.12); }
+.map-place { font-size: clamp(0.54rem, 1.1vw, 0.72rem); font-weight: 800; }
+.map-dot { width: 0.62rem; height: 0.62rem; background: var(--turkish-red); }
+.map-place > span:last-child { background: rgba(243, 236, 224, 0.96); }
+.turkiye-map figcaption { color: var(--turkish-red); font-size: 0.66rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.section-heading { margin-top: 0.5rem; padding-top: 0.9rem; border-top: 5px solid var(--turkish-red); }
+.section-heading h2 { font-family: Arial, Helvetica, sans-serif; font-size: clamp(1.55rem, 3vw, 2.25rem); font-weight: 900; letter-spacing: -0.055em; text-transform: uppercase; }
+.section-heading p, .photo-count { color: var(--turkish-red); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.city-grid { gap: 0.6rem; }
+.city-card { background: transparent; box-shadow: none; }
+.city-card:hover, .city-card:focus-visible { box-shadow: none; transform: translateY(-3px); }
+.city-card img { aspect-ratio: 1 / 1.05; filter: saturate(0.86) contrast(1.05); }
+.city-card-text { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; padding: 0.6rem 0 1.1rem; border-top: 4px solid var(--turkish-red); }
+.city-card h2 { font-family: Arial, Helvetica, sans-serif; font-size: 1.1rem; font-weight: 900; letter-spacing: -0.04em; text-transform: uppercase; }
+.city-card p { margin: 0; color: var(--turkish-red); font-size: 0.63rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.album-title { align-items: start; border-top: 5px solid var(--turkish-red); padding-top: 0.95rem; }
+.album-title h1 { font-size: clamp(3.4rem, 7.5vw, 6.5rem); }
+.album-title .eyebrow { margin-bottom: 0.55rem; }
+.back-link { border-color: var(--turkish-ink); background: transparent; color: var(--turkish-ink); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; }
+.back-link:hover, .back-link:focus-visible { background: var(--turkish-red); border-color: var(--turkish-red); color: #fff; }
+.photo-grid { gap: 0.36rem; }
+.photo-card { background: var(--turkish-ink); }
+.photo-card::after { background: linear-gradient(145deg, transparent 50%, rgba(216, 25, 32, 0.82)); }
+.photo-card img { aspect-ratio: 1 / 0.8; filter: saturate(0.84) contrast(1.06); }
+.lightbox-caption { background: var(--turkish-red); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.site-footer { margin-top: 3rem; background: var(--turkish-ink); }
+.footer-inner { color: var(--turkish-cream); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+@media (max-width: 760px) { .home-hero { grid-template-columns: 1fr; }.city-card-text { display: block; }.city-card p { margin-top: 0.25rem; }.site-nav { gap: 0.35rem 0.75rem; } }
